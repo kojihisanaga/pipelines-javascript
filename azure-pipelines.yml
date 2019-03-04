@@ -16,7 +16,7 @@ steps:
 - script: npm install -g eslint
   displayName: 'ESLint install'
 
-- script: eslint tests/**/*.js
+- script: eslint tests/**/test2.js
   displayName: 'lint test'
 
 - task: Npm@1
