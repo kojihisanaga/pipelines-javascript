@@ -15,7 +15,7 @@ steps:
 
 - script: npm install -g eslint
 - script: eslint -v
-- script: eslint test.js
+- script: eslint pipelines-javascript/tests/test.js
 
 - task: Npm@1
   displayName: 'npm test'
