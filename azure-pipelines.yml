@@ -14,8 +14,11 @@ steps:
     command: install
 
 - script: npm install -g eslint
-- script: eslint -v
-- script: eslint pipelines-javascript/tests/test.js
+  displayName: 'ESLint install'
+
+- script: eslint
+  displayName: 'lint test'
+  workingDirectory: $(Agent.BuildDirectory)
 
 - task: Npm@1
   displayName: 'npm test'
